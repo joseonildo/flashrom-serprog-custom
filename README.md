@@ -36,7 +36,7 @@ These are results from one hardware setup, not a guarantee for other chips, wiri
 
 ## Build from source
 
-Start with the original upstream [flashrom v1.6.0](https://github.com/flashrom/flashrom/releases/tag/v1.6.0), apply the two edits described above (or use the modified source once it is published in this repository), then build:
+Start with the original upstream [flashrom v1.6.0](https://github.com/flashrom/flashrom/releases/tag/v1.6.0), run the provided [reproducible build script](scripts/build-from-upstream.sh) (which checks out upstream v1.6.0 and applies both edits), or apply the two edits manually and then build:
 
 ```bash
 sudo apt update
@@ -108,4 +108,4 @@ This README documents the modification; it does not replace the upstream license
 
 ## Repository status
 
-The validated WSL build was based on flashrom v1.6.0, with the two changes described above. **This README alone is not a source or binary backup**: the modified source files, corresponding upstream licensing files, and optional build artifacts should be uploaded separately to make this repository a reproducible backup.
+The validated WSL build was based on flashrom v1.6.0, with the two changes described above. The [build script](scripts/build-from-upstream.sh) preserves the exact two source-level changes and rebuild instructions. The previously validated WSL executable is **not yet uploaded**; to back it up as well, it must be copied from the user's local WSL environment. The upstream flashrom source and its licenses are obtained from the original project by the script.
